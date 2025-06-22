@@ -20,6 +20,7 @@ model User {
   email    String   @unique
   name     String?
   password String
+  role     Role     @default(USER)
   posts    Post[]
   profile  Profile?
 }
@@ -46,4 +47,9 @@ model Tag {
   id    Int    @id @default(autoincrement())
   name  String
   posts Post[]
+}
+
+enum Role {
+  USER
+  ADMIN
 }
