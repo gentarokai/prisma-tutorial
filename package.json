@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "dev": "ts-node index.ts"
+    "dev": "ts-node index.ts",
+    "lint": "prisma validate"
   },
   "keywords": [],
   "author": "",
