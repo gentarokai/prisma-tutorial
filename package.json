@@ -20,5 +20,8 @@
   },
   "dependencies": {
     "argon2": "^0.43.0"
+  },
+  "prisma": {
+    "seed": "npm ts-node prisma/seed.ts"
   }
 }
