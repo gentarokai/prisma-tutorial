@@ -14,3 +14,28 @@ datasource db {
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  name     String?
+  password String
+}
+
+model Profile {
+  id  Int    @id @default(autoincrement())
+  bio String
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  published Boolean  @default(false)
+}
+
+model Tag {
+  id   Int    @id @default(autoincrement())
+  name String
+}
